@@ -49,5 +49,19 @@
       "vm_name": "ubuntu-webserver-base",
       "output_directory": "output/qemu/"
     }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+          "echo 'setupuser' | sudo -S apt-get upgrade -y",
+          "echo 'setupuser' | sudo -S apt-get install ansible -y"
+        ]
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "./ansible/playbook.yml",
+      "inventory_groups": ["webservers", "ftp_servers"]
+    }
   ]
 }
