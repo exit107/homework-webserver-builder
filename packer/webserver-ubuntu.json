@@ -53,15 +53,14 @@
   "provisioners": [
     {
       "type": "shell",
-      "inline": [
-          "echo 'setupuser' | sudo -S apt-get upgrade -y",
-          "echo 'setupuser' | sudo -S apt-get install ansible -y"
-        ]
+      "execute_command": "echo 'setupuser' | sudo -S -E bash '{{ .Path }}'",
+      "script": "./scripts/bootstrap.sh"
     },
     {
       "type": "ansible-local",
       "playbook_file": "./ansible/playbook.yml",
-      "inventory_groups": ["webservers", "ftp_servers"]
+      "galaxy_file": "./ansible/galaxy-requirements.yml",
+      "extra_arguments": [ "-vvvv" ]
     }
   ]
 }
