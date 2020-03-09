@@ -41,6 +41,7 @@ Roles:
 * Builder(s):
   * **TODO** Amazon AMI - amazon-instance
   * Local - qemu
+  * **TODO** Local - virtualbox-iso
   * **TODO** Azure Resource Manager (ARM) - azure-arm
 * Provisioner(s):
   * Ansible - ansible
@@ -50,4 +51,4 @@ Roles:
 #### Documentation
 * Ansible role descriptions/instructions.
 * [Instructions on how to build a local VM from the Packer file.](https://github.com/exit107/homework-webserver-builder/blob/master/LOCAL_INSTRUCTIONS.md)
-* [Instructions on how to build a remote VM from the Packer file.](https://github.com/exit107/homework-webserver-builder/blob/master/REMOTE_INSTRUCTIONS.md)
+* **TODO** [Instructions on how to build a remote VM from the Packer file.](https://github.com/exit107/homework-webserver-builder/blob/master/REMOTE_INSTRUCTIONS.md)
