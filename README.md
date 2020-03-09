@@ -49,4 +49,5 @@ Roles:
   * **TODO** Vagrant Cloud - vagrant-cloud
 #### Documentation
 * Ansible role descriptions/instructions.
-* Instructions on how to build VMs from the Packer file.
+* [Instructions on how to build a local VM from the Packer file.](https://github.com/exit107/homework-webserver-builder/blob/master/LOCAL_INSTRUCTIONS.md)
+* [Instructions on how to build a remote VM from the Packer file.](https://github.com/exit107/homework-webserver-builder/blob/master/REMOTE_INSTRUCTIONS.md)
