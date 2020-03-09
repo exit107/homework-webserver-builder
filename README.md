@@ -48,5 +48,5 @@ Roles:
   * **TODO** Vagrant - vagrant
   * **TODO** Vagrant Cloud - vagrant-cloud
 #### Documentation
-* Ansible role descriptions/instructions - Basically a man page
-* **TODO** Instructions on how to build VMs from the Packer file
+* Ansible role descriptions/instructions.
+* Instructions on how to build VMs from the Packer file.
