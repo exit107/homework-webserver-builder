@@ -19,5 +19,5 @@
 5. A `qcow2` disk image will be output in the `./output/qemu/` directory. This can be imported into QEMU and utilized for local development. 
 
 ## Notes:
-* The local packer built machine will need the network configured after booting it up. You can utilize dhcp with the command `sudo dhclient ensp02`.
+* The local packer built machine will need the network configured after booting it up. You can utilize dhcp with the command `sudo dhclient enp1s0`.
 * Verbose log output for the build is contained in the `./logs/` directory.
