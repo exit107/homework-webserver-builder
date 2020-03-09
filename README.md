@@ -39,14 +39,14 @@ Roles:
 #### Packer
 * Target OS: Ubuntu 18.04
 * Builder(s):
-  * Amazon AMI - amazon-instance
+  * **TODO** Amazon AMI - amazon-instance
   * Local - qemu
-  * Local - virtualbox-iso
-  * Azure Resource Manager (ARM) - azure-arm
+  * **TODO** Azure Resource Manager (ARM) - azure-arm
 * Provisioner(s):
   * Ansible - ansible
 * Post-Processors(s):
-  * Vagrant - vagrant
+  * **TODO** Vagrant - vagrant
+  * **TODO** Vagrant Cloud - vagrant-cloud
 #### Documentation
 * Ansible role descriptions/instructions - Basically a man page
-* Instructions on how to build VMs from the Packer file
+* **TODO** Instructions on how to build VMs from the Packer file
