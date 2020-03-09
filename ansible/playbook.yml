@@ -1,18 +1,7 @@
 ---
-# playbook.yml
-- name: "Provision New Servers"
+- name: "Provision New Server"
   hosts: localhost
-  become: true
-  vars:
-    - ansible_become_password: 'setupuser'
-
-  tasks:
-  - name: Install Apache
-    package:
-      name: "apache2"
-      state: present
-
-  - name: Install vsftp
-    package:
-      name: "vsftpd"
-      state: present
+  become: yes
+  roles:
+    - 'homework-web_server'
+    - 'homework-ftp_server'
