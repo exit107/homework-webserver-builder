@@ -41,7 +41,7 @@ Roles:
 * Builder(s):
   * **TODO** Amazon AMI - amazon-instance
   * Local - qemu
-  * **TODO** Local - virtualbox-iso
+  * Local - virtualbox-iso
   * **TODO** Azure Resource Manager (ARM) - azure-arm
 * Provisioner(s):
   * Ansible - ansible
