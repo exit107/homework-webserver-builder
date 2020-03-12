@@ -11,6 +11,7 @@
 * All logs should be stored under `./logs/`
 * If there is a local artifact built, it should be stored under `./output/`, optionally in its own subdirectory.
 * The build script is responsible for all setup and cleanup for a given template. This includes creating (and if necessary deleting) output directories.
+* Ansible roles are implemented via Ansible Galaxy and all changes to the roles should be made in those repos.
 
 ## To build the template:
 

@@ -50,6 +50,8 @@ Roles:
   * **TODO** Vagrant - `vagrant`
   * **TODO** Vagrant Cloud - `vagrant-cloud`
 #### Documentation
-* Ansible role descriptions/instructions.
+* Ansible role descriptions/instructions - See individual role repositories:
+  * [homework-web_server](https://github.com/exit107/homework-web_server)
+  * [homework-ftp_server](https://github.com/exit107/homework-ftp_server)
 * [Instructions on how to build a local VM from the Packer file.](https://github.com/exit107/homework-webserver-builder/blob/master/CONTRIBUTING.md)
 * [Instructions on how to build a remote VM from the Packer file.](https://github.com/exit107/homework-webserver-builder/blob/master/HOWTO.md)
