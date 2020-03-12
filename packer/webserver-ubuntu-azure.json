@@ -1,0 +1,43 @@
+{
+  "variables": {
+    "version": ""
+  },
+  "builders": [
+    {
+      "type": "azure-arm",
+      "subscription_id": "<CENSORED>",
+      "image_publisher": "Canonical",
+      "image_offer": "UbuntuServer",
+      "image_sku": "18.04-LTS",
+      "managed_image_name": "ubuntu-webserver-base.{{timestamp}}",
+      "managed_image_resource_group_name": "rgPackerHomework",
+      "client_id": "<CENSORED>",
+      "client_secret": "<CENSORED>",
+      "tenant_id": "<CENSORED>",
+      "os_type": "Linux",
+      "location": "West US",
+      "vm_size": "Standard_B1ms"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E bash '{{ .Path }}'",
+      "script": "./scripts/bootstrap.sh"
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "./ansible/playbook.yml",
+      "galaxy_file": "./ansible/galaxy-requirements.yml",
+      "extra_arguments": [ "-vvvv" ]
+    },
+    {
+      "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'",
+      "inline": [
+        "/usr/sbin/waagent -force -deprovision+user && export HISTSIZE=0 && sync"
+      ],
+      "inline_shebang": "/bin/sh -x",
+      "type": "shell"
+    }
+  ]
+}
