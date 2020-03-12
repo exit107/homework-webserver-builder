@@ -17,7 +17,7 @@
 2. Change into the repository directory
   * `cd homework-webserver-builder`
 3. Update the authentication values that are censored in the packer file `./packer/webserver-ubuntu-azure.json`.
-4. Run the script `./build_vbox.sh`
+4. Run the script `./build_scripts/build_arm.sh`
 
 ### Notes:
 * Verbose log output for the build is contained in the `./logs/` directory.
