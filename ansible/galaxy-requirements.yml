@@ -1,7 +1,7 @@
 - src: https://github.com/exit107/homework-web_server.git
-  version: v0.1.0
+  version: v0.2.0
   name: homework-web_server
 
 - src: https://github.com/exit107/homework-ftp_server.git
-  version: v0.1.0
+  version: v0.2.0
   name: homework-ftp_server
