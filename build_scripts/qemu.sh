@@ -12,4 +12,4 @@ PACKER_LOG=1
 PACKER_LOG_PATH="./logs/qemu_build_$(date +%Y%m%d.%H%M%S).log"
 
 # Build It!
-packer build -timestamp-ui -force packer/webserver-ubuntu-qemu.json
+packer build -timestamp-ui -force packer/qemu.json

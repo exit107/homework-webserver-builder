@@ -20,7 +20,7 @@
   * `git clone https://github.com/exit107/homework-webserver-builder.git`
 2. Change into the repository directory
   * `cd homework-webserver-builder`
-3. Run the script `./build_scripts/build_vbox.sh`
+3. Run the script `./build_scripts/vbox.sh`
 4. An `ova` will be output in the `./output/vbox/` directory. This can be imported into VirtualBox and utilized for local development. 
 _TBD: Windows-specific instructions_
 
@@ -29,7 +29,7 @@ _TBD: Windows-specific instructions_
   * `git clone https://github.com/exit107/homework-webserver-builder.git`
 2. Change into the repository directory
   * `cd homework-webserver-builder`
-3. Run the script `./build_scripts/build_qemu.sh`
+3. Run the script `./build_scripts/qemu.sh`
 4. A `qcow2` disk image will be output in the `./output/qemu/` directory. This can be imported into QEMU and utilized for local development. 
 
 ### Notes:
