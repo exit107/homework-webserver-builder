@@ -16,6 +16,7 @@ jobs:
       uses: riznob/packer-build-action@v1.1
       with:
         templateFile: './packer/webserver-ubuntu-azure.json'
+        varFile: './packer/empty-vars.json'
         workingDir: './'
       env:
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
