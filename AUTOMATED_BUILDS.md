@@ -16,7 +16,7 @@ What follows is how to setup automated builds on a forked version of this repo.
 
 ### Azure ARM:
 1. Fork the `homework-webserver-builder` repo in GitHub.
-2. In the new repo, click _Settings > Secrets > Add a new secret_. Create new secrets for each of these values that you used to generate templates locally:
+2. In the new repo, click _Settings > Secrets > Add a new secret_. Create new secrets for each of these values that you used to [generate templates locally](https://github.com/exit107/homework-webserver-builder/blob/master/HOWTO.md):
     * `ARM_SUBSCRIPTION_ID`
     * `ARM_CLIENT_ID`
     * `ARM_CLIENT_SECRET`
@@ -27,7 +27,7 @@ What follows is how to setup automated builds on a forked version of this repo.
 
 ### DigitalOcean:
 1. Fork the `homework-webserver-builder` repo in GitHub.
-2. In the new repo, click _Settings > Secrets > Add a new secret_. Create new secrets for each of these values that you used to generate templates locally:
+2. In the new repo, click _Settings > Secrets > Add a new secret_. Create new secrets for each of these values that you used to [generate templates locally](https://github.com/exit107/homework-webserver-builder/blob/master/HOWTO.md):
     * `DO_API_TOKEN`
 3. Validate that the rest of the build parameters in `./vars/digitalocean.json` are applicable/suitable for your purposes.
 3. Tag a commit as a release `git tag -a release-test -m 'Testing release builds'` and push it to GitHub `git push --tags`
