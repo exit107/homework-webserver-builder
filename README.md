@@ -41,10 +41,12 @@ Roles:
 #### Packer
 * Target OS: Ubuntu 18.04
 * Builder(s):
-  * Local - `qemu`
-  * Local - `virtualbox-iso`
-  * Azure Resource Manager (ARM) - `azure-arm`
-  * Digital Ocean - `digitalocean`
+  * Local:
+    * QEMU - `qemu`
+    * VirtualBox - `virtualbox-iso`
+  * Remote:
+    * Azure Resource Manager (ARM) - `azure-arm`
+    * Digital Ocean - `digitalocean`
 * Provisioner(s):
   * Ansible - `ansible-local`
 #### Documentation

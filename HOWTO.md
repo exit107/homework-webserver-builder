@@ -17,12 +17,14 @@
   * `cd homework-webserver-builder`
 3. Check the contents of the file `./vars/azure-arm.json` to make sure the location and vm_size make sense.
 4. Create a new file `./vars/SECRETS_azure-arm.json` with the contents:
-    > {
-    >   "arm_subscription_id": "<YOUR_SUBSCRIPTION_ID_HERE>",
-    >   "arm_client_id": "<YOUR_CLIENT_ID_HERE>",
-    >   "arm_client_secret": "<YOUR_CLIENT_SECRET_HERE>",
-    >   "arm_tenant_id": "<YOUR_TENANT_ID_HERE>"
-    > }
+    ```json
+    {
+      "arm_subscription_id": "<YOUR_SUBSCRIPTION_ID_HERE>",
+      "arm_client_id": "<YOUR_CLIENT_ID_HERE>",
+      "arm_client_secret": "<YOUR_CLIENT_SECRET_HERE>",
+      "arm_tenant_id": "<YOUR_TENANT_ID_HERE>"
+    }
+    ```
 5. Run the script `./build_scripts/azure-arm.sh`
 
 ### DigitalOcean:
@@ -32,9 +34,11 @@
   * `cd homework-webserver-builder`
 3. Check the contents of the file `./vars/digitalocean.json` to make sure the location, image, and size make sense.
 4. Create a new file `./vars/SECRETS_digitalocean.json` with the contents:
-    > {
-    >   "do_api_token": "<YOUR_API_TOKEN_HERE>"
-    > }
+    ```json
+    {
+      "do_api_token": "<YOUR_API_TOKEN_HERE>"
+    }
+    ```
 5. Run the script `./build_scripts/digitalocean.sh`
 
 ### Notes:
