@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Build the server in Azure
+    - name: Build the server on DigitalOcean
       uses: riznob/packer-build-action@v1.1
       with:
         templateFile: './packer/digitalocean.json'
