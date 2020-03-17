@@ -35,7 +35,7 @@ Roles:
   * Upload custom `index.html`
   * Enable and start Apache
 * FTP
-  * Install ftp server (TBD)
+  * Install ftp server (vsftpd)
   * Configure ftp server
   * Enable and start ftp server
 #### Packer
