@@ -17,7 +17,7 @@ jobs:
       with:
         templateFile: './packer/webserver-ubuntu-azure.json'
         varFile: './packer/empty-vars.json'
-        workingDir: '$GITHUB_WORKSPACE'
+        #workingDir: '.'
       env:
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
         ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
