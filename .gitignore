@@ -2,4 +2,4 @@ packer_cache
 logs
 output
 iso
-vars
+vars/SECRETS*

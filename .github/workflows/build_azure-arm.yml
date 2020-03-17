@@ -14,9 +14,8 @@ jobs:
     - name: Build the server in Azure
       uses: riznob/packer-build-action@v1.1
       with:
-        templateFile: './packer/webserver-ubuntu-azure.json'
-        varFile: './packer/empty-vars.json'
-        #workingDir: '.'
+        templateFile: './packer/azure-arm.json'
+        varFile: './vars/azure-arm.json'
       env:
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
         ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}

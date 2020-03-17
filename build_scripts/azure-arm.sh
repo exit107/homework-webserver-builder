@@ -5,7 +5,7 @@
 
 # Logging
 PACKER_LOG=1
-PACKER_LOG_PATH="./logs/azure_build_$(date +%Y%m%d.%H%M%S).log"
+PACKER_LOG_PATH="./logs/azure-arm_build_$(date +%Y%m%d.%H%M%S).log"
 
 # Build It!
-packer build -timestamp-ui -force -vars-file=./vars/azure.json ./packer/webserver-ubuntu-azure.json
+packer build -timestamp-ui -force -var-file=./vars/SECRETS_azure-arm.json -var-file=./vars/azure-arm.json ./packer/azure-arm.json
