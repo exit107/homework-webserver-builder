@@ -1,0 +1,39 @@
+{
+  "variables": {
+    "version": "",
+    "do_api_token": "{{env `DO_API_TOKEN`}}",
+    "do_image": "",
+    "do_region": "",
+    "do_size": ""
+
+  },
+  "sensitive-variables": [
+    "do_api_token"
+  ],
+  "builders": [
+    {
+      "type": "digitalocean",
+      "api_token": "{{user `do_api_token`}}",
+      "image": "{{user `do_image`}}",
+      "region": "{{user `do_region`}}",
+      "size": "{{user `do_size`}}",
+      "droplet_name": "ubuntu-webserver-base.{{timestamp}}",
+      "snapshot_name": "ubuntu-webserver-base.{{timestamp}}",
+      "ssh_username": "root",
+      "monitoring": "true"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E bash '{{ .Path }}'",
+      "script": "./scripts/bootstrap.sh"
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "./ansible/playbook.yml",
+      "galaxy_file": "./ansible/galaxy-requirements.yml",
+      "extra_arguments": [ "-vvvv" ]
+    }
+  ]
+}

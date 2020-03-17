@@ -1,0 +1,20 @@
+# Release a snapshot base image to DigitalOcean
+name: digitalocean
+
+# Only run when a release is pushed
+on:
+  push:
+    tags: release-*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the server in Azure
+      uses: riznob/packer-build-action@v1.1
+      with:
+        templateFile: './packer/digitalocean.json'
+        varFile: './vars/digitalocean.json'
+      env:
+        DO_API_TOKEN: ${{ secrets.DO_API_TOKEN }}

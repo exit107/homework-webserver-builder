@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Prep the the box for ansible to run
+sleep 30
 
 ## Upgrade the existing install
 apt-get update && apt-get upgrade -y
