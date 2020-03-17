@@ -22,7 +22,6 @@
   * `cd homework-webserver-builder`
 3. Run the script `./build_scripts/vbox.sh`
 4. An `ova` will be output in the `./output/vbox/` directory. This can be imported into VirtualBox and utilized for local development. 
-_TBD: Windows-specific instructions_
 
 ### QEMU:
 1. Clone the `homework-webserver-builder` repo with git.

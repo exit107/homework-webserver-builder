@@ -7,7 +7,6 @@
 ## Supported remote builders:
 * Azure ARM
 * DigitalOcean
-* _TODO:_ Amazon AMI
 
 ## To build the template from a local host:
 

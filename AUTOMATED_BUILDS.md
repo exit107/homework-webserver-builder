@@ -11,7 +11,6 @@ What follows is how to setup automated builds on a forked version of this repo.
 ## Supported remote builders:
 * Azure ARM
 * DigitalOcean
-* _TODO:_ Amazon AMI
 
 ## To set up automated builds
 
@@ -33,12 +32,6 @@ What follows is how to setup automated builds on a forked version of this repo.
 3. Validate that the rest of the build parameters in `./vars/digitalocean.json` are applicable/suitable for your purposes.
 3. Tag a commit as a release `git tag -a release-test -m 'Testing release builds'` and push it to GitHub `git push --tags`
 5. A new snapshot will be built with the name `ubuntu-webserver-base.{{timestamp}}` with _{{timestamp}}_ being the epoch time of the start of the build.
-
-### _TODO_ Amazon AMI:
-1. Fork the `homework-webserver-builder` repo in GitHub.
-2. In the new repo, click _Settings > Secrets > Add a new secret_. Create new secrets for each of these values that you used to generate templates locally:
-    * `UNKNOWN`
-3. Tag a commit as a release `git tag -a release-test -m 'Testing release builds'` and push it to GitHub `git push --tags`
 
 ### Further Reading:
 * [GitHub Actions](https://github.com/features/actions)

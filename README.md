@@ -41,16 +41,12 @@ Roles:
 #### Packer
 * Target OS: Ubuntu 18.04
 * Builder(s):
-  * **TODO** Amazon AMI - `amazon-instance`
   * Local - `qemu`
   * Local - `virtualbox-iso`
   * Azure Resource Manager (ARM) - `azure-arm`
   * Digital Ocean - `digitalocean`
 * Provisioner(s):
   * Ansible - `ansible-local`
-* Post-Processors(s):
-  * **TODO** Vagrant - `vagrant`
-  * **TODO** Vagrant Cloud - `vagrant-cloud`
 #### Documentation
 * Ansible role descriptions/instructions - See individual role repositories:
   * [homework-web_server](https://github.com/exit107/homework-web_server)
