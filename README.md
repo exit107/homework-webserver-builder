@@ -1,4 +1,5 @@
 # Homework - Webserver Builder
+![azure-arm](https://github.com/exit107/homework-webserver-builder/workflows/azure-arm/badge.svg)
 ## Requirements:
 ### Verbatim:
 > Ansible/Packer Assignment
