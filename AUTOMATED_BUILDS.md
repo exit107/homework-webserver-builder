@@ -42,3 +42,6 @@ What follows is how to setup automated builds on a forked version of this repo.
 
 ### Further Reading:
 * [GitHub Actions](https://github.com/features/actions)
+* [How to setup an API token with DigitalOcean](https://www.digitalocean.com/docs/apis-clis/api/create-personal-access-token/)
+* [$200 / 30 day free trial signup for Azure](https://azure.microsoft.com/en-us/free/)
+* [How to setup auth for Azure Resource Manager](https://packer.io/docs/builders/azure.html#authentication-for-azure)
