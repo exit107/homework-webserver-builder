@@ -4,7 +4,6 @@ name: azure-arm
 # Only run when a release is pushed
 on:
   push:
-    branches: master
     tags: release-*
 
 jobs:
