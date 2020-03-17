@@ -1,0 +1,25 @@
+# Release a template base image to Azure ARM
+name: azure-arm
+
+# Only run when a release is pushed
+on:
+  push:
+    branches: master
+    tags: release-*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the server in Azure
+      uses: riznob/packer-build-action@v1.1
+      with:
+        templateFile: './packer/webserver-ubuntu-azure.json'
+        varFile: './packer/empty-vars.json'
+        workingDir: './'
+      env:
+        ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+        ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+        ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+        ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}

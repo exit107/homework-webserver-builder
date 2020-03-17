@@ -1,19 +1,30 @@
 {
   "variables": {
-    "version": ""
+    "version": "",
+    "arm_subscription_id": "{{env `ARM_SUBSCRIPTION_ID`}}",
+    "arm_client_id": "{{env `ARM_CLIENT_ID`}}",
+    "arm_client_secret": "{{env `ARM_CLIENT_SECRET`}}",
+    "arm_tenant_id": "{{env `ARM_TENANT_ID`}}"
+
   },
+  "sensitive-variables": [
+    "arm_subscription_id",
+    "arm_client_id",
+    "arm_client_secret",
+    "arm_tenant_id"
+  ],
   "builders": [
     {
       "type": "azure-arm",
-      "subscription_id": "<CENSORED>",
+      "subscription_id": "{{user `arm_subscription_id`}}",
       "image_publisher": "Canonical",
       "image_offer": "UbuntuServer",
       "image_sku": "18.04-LTS",
       "managed_image_name": "ubuntu-webserver-base.{{timestamp}}",
       "managed_image_resource_group_name": "rgPackerHomework",
-      "client_id": "<CENSORED>",
-      "client_secret": "<CENSORED>",
-      "tenant_id": "<CENSORED>",
+      "client_id": "{{user `arm_client_id`}}",
+      "client_secret": "{{user `arm_client_secret`}}",
+      "tenant_id": "{{user `arm_tenant_id`}}",
       "os_type": "Linux",
       "location": "West US",
       "vm_size": "Standard_B1ms"
