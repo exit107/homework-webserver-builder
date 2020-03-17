@@ -53,6 +53,6 @@ Roles:
 * Ansible role descriptions/instructions - See individual role repositories:
   * [homework-web_server](https://github.com/exit107/homework-web_server)
   * [homework-ftp_server](https://github.com/exit107/homework-ftp_server)
-* [Instructions on how to build a local VM from the Packer file.](https://github.com/exit107/homework-webserver-builder/blob/master/CONTRIBUTING.md)
-* [Instructions on how to build a remote VM from the Packer file.](https://github.com/exit107/homework-webserver-builder/blob/master/HOWTO.md)
-* [Documentation for automated builds.](https://github.com/exit107/homework-webserver-builder/blob/master/AUTOMATED_BUILDS.md)
+* [Instructions on how to build a local VM from the Packer file.](CONTRIBUTING.md)
+* [Instructions on how to build a remote VM from the Packer file.](HOWTO.md)
+* [Documentation for automated builds.](AUTOMATED_BUILDS.md)
