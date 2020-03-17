@@ -1,4 +1,5 @@
 {
+  "arm_managed_image_resource_group_name": "rgPackerHomework",
   "arm_location": "West US",
   "arm_vm_size": "Standard_B1ms"
 }

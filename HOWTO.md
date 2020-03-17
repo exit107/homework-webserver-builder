@@ -9,7 +9,7 @@
 * DigitalOcean
 * _TODO:_ Amazon AMI
 
-## To build the template:
+## To build the template from a local host:
 
 ### Azure ARM:
 1. Clone the `homework-webserver-builder` repo with git.
