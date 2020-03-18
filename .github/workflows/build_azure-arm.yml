@@ -10,7 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+
+    - name: Checkout the repo
+      uses: actions/checkout@v2
+
     - name: Build the server in Azure
       uses: riznob/packer-build-action@v1.1
       with:
