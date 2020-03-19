@@ -21,6 +21,7 @@ jobs:
         varFile: './vars/azure-arm.json'
       env:
         IMAGE_NAME: "homework-webserver"
+        BUILD_VERSION: ${GITHUB_SHA::8}
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
         ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
         ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
