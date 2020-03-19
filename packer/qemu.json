@@ -1,6 +1,7 @@
 {
   "variables": {
-    "version": ""
+    "image_name": "{{env `IMAGE_NAME`}}",
+    "build_version": "{{env `BUILD_VERSION`}}"
   },
   "builders": [
     {
@@ -46,7 +47,7 @@
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
       "shutdown_command": "echo 'setupuser'|sudo -S shutdown -P now",
-      "vm_name": "ubuntu-webserver-base",
+      "vm_name": "{{user `image_name`}}_{{user `build_version`}}",
       "output_directory": "output/qemu/"
     }
   ],
