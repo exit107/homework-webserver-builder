@@ -1,7 +1,6 @@
 {
   "variables": {
-    "image_name": "{{env `IMAGE_NAME`}}",
-    "build_version": "{{env `BUILD_VERSION`}}"
+    "version": ""
   },
   "builders": [
     {
@@ -42,15 +41,8 @@
       "ssh_password": "setupuser",
       "ssh_wait_timeout": "10000s",
       "shutdown_command": "echo 'setupuser'|sudo -S shutdown -P now",
-      "vm_name": "{{user `image_name`}}_{{user `build_version`}}",
-      "output_directory": "output/vbox/",
-      "export_opts":
-      [
-        "--manifest",
-        "--vsys", "0",
-        "--description", "{{user `image_name`}}_{{user `build_version`}}",
-        "--version", "{{user `build_version`}}"
-      ]
+      "vm_name": "ubuntu-webserver-base.{{timestamp}}",
+      "output_directory": "output/vbox/"
     }
   ],
   "provisioners": [
