@@ -20,6 +20,7 @@ jobs:
         templateFile: './packer/azure-arm.json'
         varFile: './vars/azure-arm.json'
       env:
+        IMAGE_NAME: "homework-webserver"
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
         ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
         ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}

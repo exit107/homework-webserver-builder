@@ -1,6 +1,7 @@
 {
   "variables": {
-    "version": "",
+    "image_name": "{{env `IMAGE_NAME`}}",
+    "build_version": "{{env `BUILD_VERSION`}}",
     "do_api_token": "{{env `DO_API_TOKEN`}}",
     "do_image": "",
     "do_region": "",
@@ -17,10 +18,11 @@
       "image": "{{user `do_image`}}",
       "region": "{{user `do_region`}}",
       "size": "{{user `do_size`}}",
-      "droplet_name": "ubuntu-webserver-base.{{timestamp}}",
-      "snapshot_name": "ubuntu-webserver-base.{{timestamp}}",
+      "droplet_name": "{{user `image_name`}}-BUILD-IN-PROGRESS",
+      "snapshot_name": "{{user `image_name`}}-{{user `build_version`}}",
       "ssh_username": "root",
-      "monitoring": "true"
+      "monitoring": "true",
+      "tags": ["{{user `image_name`}}", "{{user `build_version`}}"]
     }
   ],
   "provisioners": [

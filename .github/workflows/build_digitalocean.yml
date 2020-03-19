@@ -20,4 +20,5 @@ jobs:
         templateFile: './packer/digitalocean.json'
         varFile: './vars/digitalocean.json'
       env:
+        IMAGE_NAME: "homework-webserver"
         DO_API_TOKEN: ${{ secrets.DO_API_TOKEN }}
