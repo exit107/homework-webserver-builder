@@ -14,14 +14,18 @@ jobs:
     - name: Checkout the repo
       uses: actions/checkout@v2
 
-    - name: Get the version
-      id: get_version
-      run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+    - name: Get the short sha
+      id: git_short_sha
+      run: echo ::set-output name=OUTPUT::$(echo $GITHUB_SHA | cut -c -7)
+
+    - name: Get the tag
+      id: git_tag
+      run: echo ::set-output name=OUTPUT::$(echo $GITHUB_REF | cut -d / -f 3)
 
     - name: What checkout are we on?
       run: echo "$BUILD_VERSION"
       env:
-        BUILD_VERSION: ${{ steps.get_version.outputs.VERSION }}
+        BUILD_VERSION: ${{ steps.git_short_sha.outputs.OUTPUT }}
 
     - name: Build the server on DigitalOcean
       uses: riznob/packer-build-action@v1.1
