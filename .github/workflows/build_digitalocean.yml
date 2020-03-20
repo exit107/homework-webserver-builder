@@ -14,10 +14,14 @@ jobs:
     - name: Checkout the repo
       uses: actions/checkout@v2
 
+    - name: Get the version
+      id: get_version
+      run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+
     - name: What checkout are we on?
       run: echo "$BUILD_VERSION"
       env:
-        BUILD_VERSION: ${{ github.sha[0:7] }}
+        BUILD_VERSION: ${{ steps.get_version.outputs.VERSION }}
 
     - name: Build the server on DigitalOcean
       uses: riznob/packer-build-action@v1.1
