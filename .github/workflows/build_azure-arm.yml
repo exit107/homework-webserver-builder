@@ -30,6 +30,7 @@ jobs:
       env:
         BUILD_VERSION: ${{ steps.git_short_sha.outputs.OUTPUT }}
         GIT_TAG: ${{ steps.git_tag.outputs.OUTPUT }}
+        IMAGE_NAME: "homework-webserver"
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
         ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
         ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
