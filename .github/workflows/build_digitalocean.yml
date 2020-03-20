@@ -14,6 +14,11 @@ jobs:
     - name: Checkout the repo
       uses: actions/checkout@v2
 
+    - name: What checkout are we on?
+      run: echo "$BUILD_VERSION"
+      env:
+        BUILD_VERSION: ${{ github.sha }}
+
     - name: Build the server on DigitalOcean
       uses: riznob/packer-build-action@v1.1
       with:
