@@ -14,13 +14,22 @@ jobs:
     - name: Checkout the repo
       uses: actions/checkout@v2
 
+    - name: Get the short sha
+      id: git_short_sha
+      run: echo ::set-output name=OUTPUT::$(echo $GITHUB_SHA | cut -c -7)
+
+    - name: Get the tag
+      id: git_tag
+      run: echo ::set-output name=OUTPUT::$(echo $GITHUB_REF | cut -d / -f 3 | cut -c 7-)
+
     - name: Build the server in Azure
       uses: riznob/packer-build-action@v1.1
       with:
         templateFile: './packer/azure-arm.json'
         varFile: './vars/azure-arm.json'
       env:
-        BUILD_VERSION: ${{ github.sha }}
+        BUILD_VERSION: ${{ steps.git_short_sha.outputs.OUTPUT }}
+        GIT_TAG: ${{ steps.git_tag.outputs.OUTPUT }}
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
         ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
         ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}

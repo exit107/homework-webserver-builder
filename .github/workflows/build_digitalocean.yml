@@ -20,12 +20,7 @@ jobs:
 
     - name: Get the tag
       id: git_tag
-      run: echo ::set-output name=OUTPUT::$(echo $GITHUB_REF | cut -d / -f 3)
-
-    - name: What checkout are we on?
-      run: echo "$BUILD_VERSION"
-      env:
-        BUILD_VERSION: ${{ steps.git_short_sha.outputs.OUTPUT }}
+      run: echo ::set-output name=OUTPUT::$(echo $GITHUB_REF | cut -d / -f 3 | cut -c 7-)
 
     - name: Build the server on DigitalOcean
       uses: riznob/packer-build-action@v1.1
@@ -33,4 +28,6 @@ jobs:
         templateFile: './packer/digitalocean.json'
         varFile: './vars/digitalocean.json'
       env:
+        BUILD_VERSION: ${{ steps.git_short_sha.outputs.OUTPUT }}
+        GIT_TAG: ${{ steps.git_tag.outputs.OUTPUT }}
         DO_API_TOKEN: ${{ secrets.DO_API_TOKEN }}
